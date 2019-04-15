@@ -41,5 +41,18 @@ export default Route.extend({
       },
 
     ]
+  },
+
+  actions:  {
+
+    newRental (id, title) {
+      this.controller.get('model').pushObject({ id, title });
+    },
+
+    deleteRental(rentalListing) {
+      this.controller.get('model').removeObject(rentalListing);
+    }
+
+
   }
 });

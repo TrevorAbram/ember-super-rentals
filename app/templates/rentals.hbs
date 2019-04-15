@@ -3,6 +3,9 @@
   </div>
   <div class="">
     <h2>Find what you need!</h2>
+    <h3>Total Listings: {{model.length}}</h3>
+
+
     <p>Let's get you in a good place, literally.</p>
     {{#link-to "about" class="button"}} About Us {{/link-to}}
   </div>
@@ -10,4 +13,11 @@
 
 {{#each this.model as |rentalListing|}}
   <RentalListing @rental= {{rentalListing}} />
+  <button {{ action "deleteRental" rentalListing }} class="btn" >Del</button>
+
 {{/each}}
+
+
+<div class="container">
+  {{outlet}}
+</div>

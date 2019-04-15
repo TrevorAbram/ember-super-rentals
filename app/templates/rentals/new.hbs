@@ -1,0 +1,8 @@
+
+<form class="form">
+  <label class="form-label">Id:</label>
+  {{input class="form-input" value=newId placeholder="Id"}}
+  <label class="form-label">Title:</label>
+  {{input class="form-input" value=newTitle placeholder="What is the title?"}}
+  <button type="submit" {{action 'newRental' newId newTitle }} class="btn">Add A Listing</button>
+</form>
